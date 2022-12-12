@@ -1,0 +1,31 @@
+.body, html{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+    display :grid;
+    
+}
+.new{
+    justify-self: flex-end;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 25px;
+}
+.card{
+    border-radius: 5px;
+    border: 1px solid;
+    box-shadow: 0px 1px 20px -5px grey;
+    height: 100px;
+    position: relative;
+}
+.labels{
+    display: inline-block;
+    width: 90px;
+}
+input{
+    padding: 0px;
+    margin: 0px;
+}
