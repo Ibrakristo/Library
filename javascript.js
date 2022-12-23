@@ -37,8 +37,8 @@ function displayBook() {
         readLabel.style.marginRight="5px";
         readCheck.style.marginRight="10px";
         readCheck.setAttribute("type","checkBox");
-        readCheck.setAttribute("id",`completed + ${i}`);
-        readLabel.setAttribute("for",`completed + ${i}`);
+        readCheck.setAttribute("id",`completed${i}`);
+        readLabel.setAttribute("for",`completed${i}`);
         readLabel.innerText = "Completed";
         if(x.read){
             readCheck.checked = true;
