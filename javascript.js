@@ -9,16 +9,16 @@ let form = submit.parentNode.children;
 
 body.removeChild(forms);
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-
-}
-
-Book.prototype.info = function () {
-    return this.title + " by " + this.author + ", " + this.pages + ", " + (this.read ? "read" : "not read yet");
+class Book{
+    constructor(title,author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    info(){
+        return this.title +" by " + this.author + ", " + this.pages + ", " + (this.read ? "read":"not read yet");
+    }
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -37,8 +37,8 @@ function displayBook() {
         readLabel.style.marginRight="5px";
         readCheck.style.marginRight="10px";
         readCheck.setAttribute("type","checkBox");
-        readCheck.setAttribute("id","completed");
-        readLabel.setAttribute("for","completed");
+        readCheck.setAttribute("id",`completed + ${i}`);
+        readLabel.setAttribute("for",`completed + ${i}`);
         readLabel.innerText = "Completed";
         if(x.read){
             readCheck.checked = true;
